@@ -1,0 +1,24 @@
+/* -----Variables----- */
+:root {
+  // Background colors
+  --bg-color-light: #fff;
+  --bg-color-pale: #F1F1F1;
+  --bg-color-dark: #111518;
+  --bg-color-accented: #FF6B09;
+  // Font colors
+  --font-color-main: #111518;
+  --font-color-secondary: #B9B9B9;
+  --font-color-light: #fff;
+  // Accent colors
+  --accent-color: #FF6B09;
+  // Border colors
+  --border-color: #B9B9B9;
+  --border-color-light: #fff;
+  // Opacity settings
+  // Boxshadow settings
+  // Gaps measures (for ex. "--item-set-gap: 20px;")
+  // Animation settings
+  --timing-fn: cubic-bezier(0.4, 0, 0.2, 1);
+  --transiton-duration-time: 250ms;
+  // Backdrop opacity settings
+}
