@@ -1,24 +1,24 @@
 // Базовые компоненты
-@import "utils/variables";
-@import "utils/breakpoints";
-@import "utils/mixins";
-@import "utils/placeholders";
-@import "base/common";
-@import "base/logo";
-@import "base/btn";
-@import "base/social";
+@import "./variables";
+@import "./breakpoints";
+@import "./mixins";
+@import "./placeholders";
+@import "./common";
+@import "./logo";
+@import "./btn";
+@import "./social";
 // Стили блоков страницы
-@import "components/header";
-@import "components/hero";
-@import "components/advantages";
-@import "components/problems";
-@import "components/how";
-@import "components/program";
-@import "components/benefits";
-@import "components/about";
-@import "components/guarantee";
-@import "components/reviews";
-@import "components/contacts";
-@import "components/footer";
+@import "./header";
+@import "./hero";
+@import "./advantages";
+@import "./problems";
+@import "./how";
+@import "./program";
+@import "./benefits";
+@import "./about";
+@import "./guarantee";
+@import "./reviews";
+@import "./contacts";
+@import "./footer";
 // Мобильное меню
-@import "base/mobile-menu"; 
+@import "./mobile-menu"; 
