@@ -10,28 +10,30 @@
     </p>
     <form class="contacts__form" name="free-lesson">
       <label class="contacts__label-container">
-        <p class="contacts__label-text">Имя*</p>
-
-        <input
-          class="contacts__input"
-          type="text"
-          pattern="[A-Za-zА-Яа-я]{3,}"
-          title="Имя должно содержать 3 и более буквы"
-          required
-          placeholder=" "
-        />
+        <div class="contacts__label-wrapper">
+          <input
+            class="contacts__input"
+            type="text"
+            pattern="[A-Za-zА-Яа-я]{3,}"
+            title="Имя должно содержать 3 и более буквы"
+            required
+            placeholder=" "
+          />
+          <p class="contacts__label-text">Имя*</p>
+        </div>
       </label>
       <label class="contacts__label-container">
-        <p class="contacts__label-text">Телефон*</p>
-
-        <input
-          class="contacts__input"
-          type="tel"
-          pattern="[+38]{3}[0-9]{3}[0-9]{3}[0-9]{2}[0-9]{2}"
-          title="Пожалуйста, введите данные по формату: +380123456789"
-          required
-          placeholder=" "
-        />
+        <div class="contacts__label-wrapper">
+          <input
+            class="contacts__input"
+            type="tel"
+            pattern="[+38]{3}[0-9]{3}[0-9]{3}[0-9]{2}[0-9]{2}"
+            title="Пожалуйста, введите данные по формату: +380123456789"
+            required
+            placeholder=" "
+          />
+          <p class="contacts__label-text">Телефон*</p>
+        </div>
       </label>
       <button class="contacts__button" type="submit">хочу на бесплатное занятие</button>
     </form>
