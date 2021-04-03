@@ -57,9 +57,7 @@
 
 .contacts__label-container {
   width: 100%;
-  display: inline-flex;
-  flex-direction: column;
-  text-align: left;
+  display: block;
 
   &:first-child {
     margin-bottom: 20px;
