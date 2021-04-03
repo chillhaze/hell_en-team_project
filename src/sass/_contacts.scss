@@ -82,6 +82,10 @@
 
   background-color: transparent;
   color: var(--font-color-light);
+
+  &:not(:placeholder-shown):required:invalid {
+    border-color: red;
+  }
 }
 
 .contacts__button {
