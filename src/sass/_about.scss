@@ -23,6 +23,12 @@
   letter-spacing: 0.03em;
 
   margin-bottom: 20px;
+
+  @media screen and (min-width: 768px) {
+    font-size: 26px;
+
+    margin-bottom: 30px;
+  }
 }
 
 .about__img-wrapper {
@@ -53,7 +59,6 @@
 }
 
 .about__list {
-  margin-bottom: 23px;
   &::after {
     display: block;
 
@@ -89,10 +94,6 @@
   }
 }
 
-.about__text-wrapper {
-  margin-bottom: 10px;
-}
-
 .about__paragraph {
   font-weight: 500;
   font-size: 12px;
@@ -101,12 +102,13 @@
 
   color: var(--font-color-secondary);
 
-  &:not(:last-child) {
-    margin-bottom: 25px;
-  }
+  margin-top: 25px;
 }
 
 .about__link {
+  margin-top: 10px;
+  display: inline-block;
+
   color: var(--accent-color);
 
   font-weight: 500;
