@@ -45,6 +45,8 @@ body {
   letter-spacing: 0.08em;
   color: var(--font-color-main);
   background-color: var(--bg-color-light);
+
+  counter-reset: section; 
 }
 
 /* -----Container----- */
