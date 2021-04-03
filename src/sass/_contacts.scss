@@ -1,0 +1,41 @@
+.contacts {
+  background-color: grey;
+}
+
+.contacts__title {
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 1.36;
+  letter-spacing: 0.03em;
+
+  color: var(--font-color-light);
+}
+
+.contacts__text {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.25;
+
+  color: var(--font-color-light);
+}
+
+.accent-text-color {
+  color: var(--accent-color);
+}
+
+.contacts__label {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.214;
+
+  color: var(--font-color-light);
+}
+
+.contacts__button {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 1.25;
+  text-transform: uppercase;
+
+  color: var(--font-color-light);
+}
