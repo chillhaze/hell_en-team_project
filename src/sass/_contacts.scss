@@ -1,0 +1,132 @@
+.contacts {
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  background-color: var(--bg-color-dark);
+}
+
+.container {
+  min-width: 320px;
+  max-width: 480px;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  @media screen and (min-width: 768px) {
+    max-width: 768px;
+    padding: 0 40px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    max-width: 1280px;
+  }
+}
+
+.contacts__title {
+  margin-bottom: 30px;
+
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 1.36;
+  letter-spacing: 0.03em;
+
+  color: var(--font-color-light);
+}
+
+.contacts__text {
+  margin-bottom: 30px;
+
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.25;
+
+  color: var(--font-color-light);
+}
+
+.accent-text-color {
+  color: var(--accent-color);
+}
+
+.contacts__form {
+  margin-left: auto;
+  margin-right: auto;
+  width: 280px;
+
+  @media screen and (min-width: 768px) {
+    width: 390px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    width: 478px;
+  }
+}
+
+.contacts__label-container {
+  width: 100%;
+  display: block;
+
+  &:first-child {
+    margin-bottom: 20px;
+  }
+}
+
+.contacts__label-wrapper {
+  position: relative;
+}
+
+.contacts__label-text {
+  position: absolute;
+  top: 50%;
+  left: 28px;
+  transform: translateY(-50%);
+
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.214;
+
+  color: var(--font-color-light);
+
+  transition: transform var(--transiton-duration-time) var(--timing-fn),
+    font-size var(--transiton-duration-time) var(--timing-fn),
+    color var(--transiton-duration-time) var(--timing-fn);
+
+  .contacts__label-container:hover &,
+  .contacts__label-container:focus &,
+  .contacts__input:not(:placeholder-shown) + & {
+    transform: translateY(-40px);
+    font-size: 11px;
+    color: var(--accent-color);
+  }
+}
+
+.contacts__input {
+  width: 100%;
+  padding: 15px 15px 15px 28px;
+  border: 1px solid var(--border-color-light);
+
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.214;
+
+  background-color: transparent;
+  color: var(--font-color-light);
+
+  &:not(:placeholder-shown):required:invalid {
+    border-color: red;
+  }
+}
+
+.contacts__button {
+  margin-top: 50px;
+  padding: 14px 9px;
+  border: none;
+
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 1.25;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+
+  background-color: var(--bg-color-accented);
+  color: var(--font-color-light);
+}
