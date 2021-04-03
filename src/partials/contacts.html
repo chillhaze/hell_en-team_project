@@ -8,8 +8,10 @@
     свяжется консультант и ответит на вопросы
   </p>
   <form name="free-lesson">
-    <label class="contacts__label"
-      >Имя*<input
+    <label class="contacts__label-container">
+      <p class="contacts__label-text">Имя*</p>
+
+      <input
         class="contacts__input"
         type="text"
         pattern="[A-Za-zА-Яа-я]{3,}"
@@ -17,8 +19,9 @@
         required
       />
     </label>
-    <label class="contacts__label"
-      >Телефон*
+    <label class="contacts__label-container">
+      <p class="contacts__label-text">Телефон*</p>
+
       <input
         class="contacts__input"
         type="tel"
