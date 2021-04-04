@@ -14,6 +14,29 @@
   margin-bottom: 50px;
 }
 
+.logo__link {
+  color: var(--font-color-light);
+}
+
+.logo__text-top {
+  @include font-pm(18, 0.08, 700, 1.25);
+}
+
+.logo__icon {
+  vertical-align: middle;
+  fill: var(--accent-color);
+}
+
+.logo__text-en {
+  text-transform: uppercase;
+}
+
+.logo__text-bottom {
+  margin-top: 8px;
+  text-transform: uppercase;
+  @include font-pm(7, 0.08, 800, 1.25);
+}
+
 .mobile-menu__btn-close {
   border: none;
   background-color: transparent;
@@ -23,6 +46,10 @@
     fill: var(--accent-color);
   }
 }
+
+// .mobile-menu__btn-close-icon {
+//   fill: white;
+// }
 
 .mobile-menu__nav {
   margin-bottom: 50px;
