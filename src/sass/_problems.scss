@@ -1,11 +1,65 @@
-.problems__wrapper {
-  background: linear-gradient(to bottom, #e4af9d 78%, #e4e4d8 22%);
+.problems {
+  background: linear-gradient(to bottom, var(--bg-color-dark) 73%, var(--bg-color-light) 27%);
+  padding-bottom: 50px;
 }
 
-.problems-container {
-  padding-top: 50px;
+.problems__wrapper {
+  background: var(--bg-color-light);
+  padding: 20px 30px;
+  box-shadow: -5px 8px 26px rgb(0 0 0 / 4%);
+
+  @include tablet {
+    padding: 30px 96px;
+  }
 }
 
 .problems__title {
-  color: red;
+  padding-top: 50px;
+  margin-bottom: 27px;
+  color: var(--bg-color-light);
+
+  @include font-pm(20, 0.03, 800, 27);
+
+  @include tablet {
+    padding-top: 60px;
+  }
+}
+
+.problems__list {
+  padding: 0;
+  counter-reset: cnt;
+  list-style-type: none;
+  margin: 0;
+
+  @include tablet {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: -24px;
+    margin-left: -22px;
+  }
+}
+
+.problems__item {
+  @include font-pm(14, 0.08, 700, 24);
+
+  @include tablet {
+    flex-basis: calc(100% / 2);
+    margin-top: 24px;
+    margin-left: 22px;
+  }
+}
+
+.problems__item:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.problems__item::before {
+  counter-increment: cnt;
+  content: '— ' counter(cnt, decimal-leading-zero) ' ';
+  display: flex;
+  flex-direction: column;
+  color: var(--accent-color);
+  margin-bottom: 5px;
+
+  @include font-pm(14, 0.08, 700, 17.07);
 }
