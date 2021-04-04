@@ -1,15 +1,14 @@
 .guarantee__container {
-  padding-top: 50px;
   padding-bottom: 50px;
 
   @include tablet {
     min-width: 768px;
     padding: 0 40px;
+    padding-bottom: 50px;
   }
 
   @include desktop {
     min-width: 1280px;
-    padding-top: 130px;
     padding-bottom: 130px;
   }
 }
