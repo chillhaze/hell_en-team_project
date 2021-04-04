@@ -14,18 +14,6 @@
   }
 }
 
-// @media (min-width: $tablet) {
-//   .guarantee__container {
-//     min-width: 768px;
-//     padding: 0 40px;
-//   }
-// }
-
-// @media (min-width: $desktop) {
-//   .guarantee__container {
-//     min-width: 1280px;
-//   }
-
 .guarantee__title {
   @include font-pm(26, 0.03, 800, 34);
   text-align: center;
