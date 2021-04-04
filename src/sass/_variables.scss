@@ -9,6 +9,7 @@
   --font-color-main: #111518;
   --font-color-secondary: #b9b9b9;
   --font-color-light: #fff;
+  --font-color-guarantee: #3d3d3d;
   // Accent colors
   --accent-color: #ff6b09;
   // Border colors
@@ -21,6 +22,7 @@
   --timing-fn: cubic-bezier(0.4, 0, 0.2, 1);
   --transiton-duration-time: 250ms;
   // Backdrop opacity settings
+  --backdrop-color-op: rgba(17, 21, 24, 0.9);
 }
 
 // Breakpoint
