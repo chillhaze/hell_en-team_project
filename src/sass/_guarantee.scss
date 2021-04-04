@@ -1,21 +1,21 @@
-.guarantee__container {
+.guarantee {
   padding-bottom: 50px;
 
-  @include tablet {
-    min-width: 768px;
-    padding: 0 40px;
-    padding-bottom: 50px;
-  }
-
   @include desktop {
-    min-width: 1280px;
     padding-bottom: 130px;
+  }
+}
+
+@media (max-width: 767px) {
+  .container__guarantee {
+    padding: 0;
   }
 }
 
 .guarantee__title {
   @include font-pm(26, 0.03, 800, 34);
   text-align: center;
+  color: var(--font-color-guarantee);
   margin-bottom: 30px;
 
   @include desktop {
@@ -25,7 +25,7 @@
 }
 .guarantee__container-wrapper {
   padding: 30px 20px 30px 27px;
-  background-color: var(--bg-color-pale);
+  background: var(--bg-color-pale);
 
   @include tablet {
     padding: 30px 50px 30px 86px;
@@ -68,7 +68,6 @@
   background-repeat: no-repeat;
   display: block;
   background-size: cover;
-  // background-position: 50%;
   width: 14.37px;
   height: 20px;
   background-image: url(../images/fire.svg);
