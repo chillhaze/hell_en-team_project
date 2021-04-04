@@ -10,14 +10,14 @@
     box-shadow: -5px 21px 26px rgba(0, 0, 0, 0.04);
   }
 
-  @media screen and(min-width: $tablet) {
+  @include tablet {
     max-width: $tablet;
     height: 556px;
     background-image: url(../images/hero-tablet-background.svg);
     box-shadow: -5px 21px 26px rgba(0, 0, 0, 0.04);
   }
 
-  @media screen and(min-width: $desktop) {
+  @include desktop {
     position: relative;
     max-width: 1688px;
     height: 878px;
@@ -50,11 +50,8 @@
   margin-bottom: 30px;
   color: var(--font-color-main);
   font-family: Montserrat;
+  @include font-pm(20, 0.03, 800, 27);
   font-style: normal;
-  font-weight: 800;
-  font-size: 20px;
-  line-height: 1.36;
-  letter-spacing: 0.03em;
 
   @media screen and(min-width: $tablet) {
     margin-top: 0;
@@ -71,11 +68,8 @@
 .hero__text {
   margin-bottom: 30px;
   font-family: Montserrat;
+  @include font-pm(14, 0.08, 700, 22);
   font-style: normal;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.5714;
-  letter-spacing: 0.08em;
 
   @media screen and(min-width: $tablet) {
     width: 300px;
@@ -98,6 +92,7 @@
 }
 
 .hero__btn {
+  @include font-pm(12, 0.08, 700, 15);
   display: block;
   width: 260px;
   margin: 0 auto 30px;
@@ -106,10 +101,6 @@
   color: var(--font-color-light);
   border: 1px solid transparent;
   font-family: Montserrat;
-  font-weight: 700;
-  font-size: 12px;
-  line-height: 1.25;
-  letter-spacing: 0.08em;
   text-transform: uppercase;
   text-align: center;
   transition: color var(--transiton-duration-time) var(--timing-fn),
