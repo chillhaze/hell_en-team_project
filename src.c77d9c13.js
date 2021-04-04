@@ -3,4 +3,4 @@ parcelRequire=function(e,r,t,n){var i,o="function"==typeof parcelRequire&&parcel
 },{"./../images/about-icon-chek.svg":[["about-icon-chek.df09c347.svg","7+SO"],"7+SO"]}],"Focm":[function(require,module,exports) {
 "use strict";require("./sass/main.scss");
 },{"./sass/main.scss":"clu1"}]},{},["Focm"], null)
-//# sourceMappingURL=/hell_en-team_project/src.36cabf36.js.map
+//# sourceMappingURL=/hell_en-team_project/src.c77d9c13.js.map
