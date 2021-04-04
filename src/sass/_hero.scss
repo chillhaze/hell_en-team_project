@@ -6,14 +6,14 @@
     min-width: 320px;
     max-width: $mobile;
     height: 618px;
-    background-image: url(../images/mobile-background.svg);
+    background-image: url(../images/hero-mobile-background.svg);
     box-shadow: -5px 21px 26px rgba(0, 0, 0, 0.04);
   }
 
   @media screen and(min-width: $tablet) {
     max-width: $tablet;
     height: 556px;
-    background-image: url(../images/tablet-background.svg);
+    background-image: url(../images/hero-tablet-background.svg);
     box-shadow: -5px 21px 26px rgba(0, 0, 0, 0.04);
   }
 
@@ -21,7 +21,7 @@
     position: relative;
     max-width: 1688px;
     height: 878px;
-    background-image: url(../images/destop-background.svg);
+    background-image: url(../images/hero-desktop-background.svg);
   }
 }
 
@@ -104,6 +104,7 @@
   padding: 14px 1px;
   background-color: var(--accent-color);
   color: var(--font-color-light);
+  border: 1px solid transparent;
   font-family: Montserrat;
   font-weight: 700;
   font-size: 12px;
@@ -111,10 +112,21 @@
   letter-spacing: 0.08em;
   text-transform: uppercase;
   text-align: center;
+  transition: color var(--transiton-duration-time) var(--timing-fn),
+    background-color var(--transiton-duration-time) var(--timing-fn),
+    border-style var(--transiton-duration-time) var(--timing-fn);
 
   @media screen and (min-width: $tablet) {
     margin-left: 0;
   }
+}
+
+.hero__btn:hover,
+.hero__btn:focus {
+  color: var(--accent-color);
+  background-color: var(--font-color-light);
+  border: 1px solid var(--accent-color);
+  transform: transition;
 }
 
 .hero__picture {
@@ -130,12 +142,12 @@
   @media screen and(min-width: $tablet) {
     width: 376px;
     height: 321px;
-    background-image: url(../images/hero-teacher-hd.png);
+    background-image: url(../images/hero-tablet-single.png);
 
     @media screen and(min-device-pixel-ratio: 2),
       (min-resolution: 192dpi),
       (min-resolution: 2dppx) {
-      background-image: url(../images/hero-teacher-hd@2x.png);
+      background-image: url(../images/hero-tablet-single@2x.png);
       background-size: 376px 321px;
     }
   }
@@ -147,13 +159,13 @@
     width: 841px;
     height: 718px;
     margin: 0;
-    background-image: url(../images/hero-teacher-fhd.png);
+    background-image: url(../images/hero-desktop-single.png);
     background-size: 841px 718px;
 
     @media screen and(min-device-pixel-ratio: 2),
       (min-resolution: 192dpi),
       (min-resolution: 2dppx) {
-      background-image: url(../images/hero-teacher-fhd@2x.png);
+      background-image: url(../images/hero-desktop-single@2x.png);
       background-size: 841px 718px;
     }
   }
