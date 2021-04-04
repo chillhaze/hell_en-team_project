@@ -9,6 +9,20 @@
 
   @include font-pm(20, 0.03, 800);
   color: var(--font-color-main);
+
+  @media (min-width: 1280px) {
+    text-align: start;
+    font-size: 46px;
+  }
+}
+
+.how-we-do__list {
+  @media (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -20px 0 0 -20px;
+    justify-content: space-between;
+  }
 }
 
 .how-we-do__item {
@@ -51,11 +65,26 @@
   &:focus-within .how-we-do__card-title::after {
     background-color: var(--bg-color-light);
   }
+
+  @media (min-width: 768px) {
+    flex-basis: calc(100% / 2 - 20px);
+    margin: 20px 0 0 20px;
+  }
+
+  @media (min-width: 1280px) {
+    flex-basis: calc(100% / 3 - 20px);
+    margin: 20px 0 0 20px;
+    padding: 40px 30px;
+  }
 }
 
 .how-we-do__img {
   margin-bottom: 20px;
   text-align: center;
+
+  @media (min-width: 1280px) {
+    margin-bottom: 30px;
+  }
 }
 
 .how-we-do__icon {
@@ -80,10 +109,19 @@
     height: 2px;
     background-color: var(--accent-color);
   }
+
+  @media (min-width: 1280px) {
+    margin-bottom: 32px;
+    font-size: 20px;
+  }
 }
 
 .how-we-do__descr {
   text-align: center;
   @include font-pm(12, 0.08, 500);
   color: var(--font-color-secondary);
+
+  @media (min-width: 1280px) {
+    font-size: 18px;
+  }
 }
