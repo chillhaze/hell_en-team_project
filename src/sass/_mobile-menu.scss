@@ -17,7 +17,7 @@
   transition: transform var(--transiton-duration-time) var(--timing-fn);
 
   @include tablet {
-    padding-top: 45px;
+    padding-top: 40px;
     min-width: 768px;
     max-width: 1279px;
   }

@@ -29,6 +29,10 @@
 .logo__text-top {
   @include font-pm(18, 0.08, 700, 1.25);
 
+  @include tablet {
+    @include font-pm(26, 0.04, 800, 32);
+  }
+
   @media only screen and (min-width: 1280px) {
     @include font-pm(26, 0.04, 800, 32);
     white-space: nowrap;
@@ -60,6 +64,11 @@
   margin-top: 8px;
   text-transform: uppercase;
   @include font-pm(7, 0.08, 800, 1.25);
+
+  @include tablet {
+    margin-top: 5px;
+    @include font-pm(8, 0.29, 700, 10);
+  }
 
   @media only screen and (min-width: 1280px) {
     margin-top: 5px;
