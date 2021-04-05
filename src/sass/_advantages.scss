@@ -1,0 +1,116 @@
+.advantages {
+  padding-top: 30px;
+  padding-bottom: 50px;
+
+  background-color: var(--bg-color-light);
+
+  @media screen and (min-width: 768px) {
+    padding-top: 50px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    padding-top: 97px;
+    padding-bottom: 130px;
+  }
+}
+
+.advantages__list {
+  @media screen and (max-width: 767px) {
+    width: 216px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -10px;
+    margin-left: -10px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    min-height: 102px;
+    align-items: center;
+    margin-right: -19px;
+    margin-left: -19px;
+  }
+}
+
+.advantages__item {
+  position: relative;
+
+  margin-bottom: 30px;
+  padding-left: 69px;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.429;
+  letter-spacing: 0.08em;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+
+    display: inline-block;
+
+    width: 59px;
+    height: 60px;
+
+    background-image: url('../images/advantages-female.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &:nth-child(1) + &::after {
+    background-image: url('../images/advantages-mobile-learning.svg');
+  }
+
+  &:nth-child(2) + &::after {
+    background-image: url('../images/advantages-insurance.svg');
+  }
+
+  @media screen and (min-width: 768px) {
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-bottom: 0;
+    flex-basis: calc((100% - 3 * 20px) / 3);
+  }
+
+  @media screen and (min-width: 1280px) {
+    margin-right: 19px;
+    margin-left: 19px;
+    flex-basis: calc(
+      (100% - 3 * 38px) / 3
+    ); // Если будет выбрана модель с чайладами, то флекс-базис нужно убрать
+    padding-left: 88px;
+
+    // font-size: 20px;
+    font-size: 16px;
+    line-height: 1.65;
+
+    // Костыль-алёрт! По макету это место очень коряво построено. Автоматический flex-basis не подходит (тк каждый элемент разного размера), поэтому сделал через nth-child. Оставил выше его закоменченным, чтоб можно было увидеть наглядно, что он не срабатывает так, чтоб было как на макете. Еще вариант поставить фонт-сайз 16рх, но такое себе.
+    // &:nth-child(1) {
+    //   flex-basis: 428px;
+    // }
+
+    // &:nth-child(2) {
+    //   flex-basis: 333px;
+    // }
+
+    // &:nth-child(3) {
+    //   flex-basis: 343px;
+    // }
+
+    &::after {
+      width: 100px;
+      height: 102px;
+    }
+  }
+}
