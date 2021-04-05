@@ -1,0 +1,196 @@
+/* -----Revievs styles----- */
+.reviews {
+  padding: 50px 0;
+  @include desktop {
+    padding: 130px 0  ;
+  }
+
+  .container {
+    position: relative;
+  }
+}
+
+.reviews__title {
+  margin-bottom: 20px;
+  text-align: center;
+  @include font-pm(20, 0.03, 800, 26);
+  color: var(--font-color-dark);
+
+  @include tablet {
+    @include font-pm(26, 0.03, 800, 34);
+  }
+
+  @include desktop {
+    margin-bottom: 50px;
+    @include font-pm(46, 0.03, 800, 60);
+  }
+}
+
+.reviews__list {
+  margin-bottom: 20px;
+
+  @include tablet {
+    margin-bottom: 30px;
+  }
+
+  @include desktop {
+    margin-bottom: 40px;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.reviews__item {
+  min-height: 313px;
+  max-width: 1090px;
+  margin: 0 auto;
+  padding: 20px 20px 30px;
+  @include flexCenter;
+  flex-direction: column;
+  box-shadow: var(--reviews-box-shadow);
+
+  @include tablet {
+    padding: 40px;
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  @include desktop {
+    padding: 50px 112px 51px 82px;
+  }
+}
+
+.reviewer__avatar {
+  margin: 20px 0;
+
+  @include tablet {
+    margin: 0 46px 0 0;
+  }
+}
+
+.reviewer__img {
+  min-width: 90px;
+
+  @include tablet {
+    min-width: 150px;
+  }
+}
+
+.reviewer__link {
+  width: 30px;
+  margin: 0 auto;
+  @include flexCenter;
+  cursor: pointer;
+}
+
+.reviewer__img {
+  margin-bottom: 20px;
+}
+
+.reviewer__info {
+  text-align: center;
+
+  @include tablet {
+    text-align: left;
+  }
+}
+
+.reviewer__name {
+  margin-bottom: 10px;
+  @include font-pm(14, 0.08, 800, 17);
+  color: var(--accent-color);
+
+  @include tablet {
+    margin-bottom: 20px;
+    @include font-pm(20, 0.08, 800, 24);
+  }
+
+  @include desktop {
+    margin-bottom: 20px;
+    @include font-pm(30, 0.08, 800, 37);
+  }
+}
+
+.reviewer__education {
+  max-width: 438px;
+  margin-bottom: 10px;
+  @include font-pm(12, 0.08, 500, 15);
+  color: var(--font-color-secondary);
+
+  @include tablet {
+    margin-bottom: 20px;
+  }
+}
+
+.reviewer__feedback {
+  @include font-pm(12, 0.03, 500, 20);
+  color: var(--font-color-dark);
+
+  @include desktop {
+    @include font-pm(18, 0.03, 500, 28);
+  }
+
+  a {
+    display: block;
+    text-decoration: underline;
+    color: var(--accent-color);
+
+    @include tablet {
+      display: inline;
+    }
+  }
+}
+
+.reviews__slider {
+  @include flexCenter;
+
+  &:before {
+    content: "";
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    width: 30px;
+    height: 15px;
+    background-image: url(../images/arrow-prev.svg);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+    cursor: pointer;
+
+    @include tablet {
+      bottom: 50%;
+      left: 25px;
+    }
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    width: 30px;
+    height: 15px;
+    background-image: url(../images/arrow-next.svg);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+    cursor: pointer;
+
+    @include tablet {
+      bottom: 50%;
+      right: 25px;
+    }
+  }
+}
+
+.reviews__slider-item {
+  margin: 0 5px;
+  @include tablet {
+    margin: 0 15px;
+  }
+}
+
+.hidden--item {
+  @media screen and (max-width: $tablet) {
+    display: none;
+  }
+}
