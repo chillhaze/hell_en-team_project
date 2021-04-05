@@ -17,3 +17,56 @@
 // .logo__accent {
 //   color: var(--accent-color);
 // }
+
+.logo__link {
+  color: var(--font-color-light);
+}
+
+.logo__link--header {
+  color: var(--font-color-main);
+}
+
+.logo__text-top {
+  @include font-pm(18, 0.08, 700, 1.25);
+
+  @media only screen and (min-width: 1280px) {
+    @include font-pm(26, 0.04, 800, 32);
+    white-space: nowrap;
+  }
+}
+
+.logo__icon {
+  vertical-align: middle;
+  width: 15px;
+  height: 15px;
+  fill: var(--accent-color);
+
+  @include tablet {
+    width: 22px;
+    height: 30px;
+  }
+
+  @include desktop {
+    width: 22px;
+    height: 30px;
+  }
+}
+
+.logo__text-en {
+  text-transform: uppercase;
+}
+
+.logo__text-bottom {
+  margin-top: 8px;
+  text-transform: uppercase;
+  @include font-pm(7, 0.08, 800, 1.25);
+
+  @media only screen and (min-width: 1280px) {
+    margin-top: 5px;
+    @include font-pm(8, 0.28, 700, 10);
+  }
+}
+
+.logo__text-bottom--accent {
+  color: var(--accent-color);
+}
