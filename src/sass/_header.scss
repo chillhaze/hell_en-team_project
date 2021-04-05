@@ -1,0 +1,110 @@
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  @include tablet {
+    padding-top: 40px;
+  }
+}
+
+.header-nav {
+  @media only screen and (max-width: 1279px) {
+    display: none;
+  }
+
+  @media only screen and (min-width: 1280px) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 60px;
+    margin-left: 144px;
+  }
+}
+
+.header-nav__list {
+  display: flex;
+  //   justify-content: space-between;
+}
+
+.header-nav__item {
+  margin-right: 40px;
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.header-nav__link {
+  display: inline-block;
+  @include font-pm(14, 0.14, 700, 17);
+  text-transform: uppercase;
+  white-space: nowrap;
+  color: var(--font-color-secondary);
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: var(--accent-color);
+  }
+}
+
+.header__btn-list {
+  @include tablet {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.header__btn {
+  @media only screen and (max-width: 768px) {
+    display: none;
+  }
+
+  @media only screen and (min-width: 768px) and (max-width: 1279px) {
+    display: block;
+    padding: 16px 5px;
+    margin-right: 40px;
+    @include font-pm(12, 0.08, 700, 15);
+    text-transform: uppercase;
+    white-space: nowrap;
+    color: var(--accent-color);
+    background-color: transparent;
+    border: 2px solid var(--accent-color);
+  }
+
+  @media only screen and (min-width: 1280px) {
+    display: block;
+    padding: 26px 24px;
+    @include font-pm(14, 0.08, 700, 17);
+    text-transform: uppercase;
+    white-space: nowrap;
+    color: var(--accent-color);
+    background-color: transparent;
+    border: 2px solid var(--accent-color);
+    cursor: pointer;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: var(--font-color-light);
+      background-color: var(--accent-color);
+    }
+  }
+}
+
+.header__mobile-menu {
+  background-color: transparent;
+  border: 2px solid red;
+
+  @media only screen and (min-width: 1280px) {
+    display: none;
+  }
+}
+
+.header__mobile-menu-icon {
+  fill: black;
+  color: black;
+  //   background-color: black;
+}
