@@ -97,15 +97,32 @@
   line-height: 1.21;
   letter-spacing: 0.08em;
 
+  @media screen and (min-width: 768px) {
+    font-size: 20px;
+  }
+  @media screen and (min-width: 1280px) {
+    font-size: 30px;
+  }
+
   &::before {
     content: '';
     width: 20px;
     height: 20px;
+
     background-image: url(../images/phone.svg);
     background-size: contain;
     background-repeat: no-repeat;
 
     margin-right: 10px;
+
+    @media screen and (min-width: 768px) {
+      width: 24px;
+      height: 23px;
+    }
+    @media screen and (min-width: 1280px) {
+      width: 30px;
+      height: 29px;
+    }
   }
 
   @media screen and(min-width: 768px) {
@@ -116,6 +133,12 @@
       border: 1px solid var(--border-color);
 
       margin-left: 24px;
+    }
+
+    @media screen and(min-width: 1280px) {
+      &::after {
+        margin-left: 16px;
+      }
     }
   }
 }
