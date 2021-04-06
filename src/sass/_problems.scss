@@ -134,3 +134,16 @@
     @include font-pm(20, 0.08, 700, 32.98);
   }
 }
+
+.problems__title-mobile {
+  display: block;
+  @include tablet {
+    display: inline;
+  }
+}
+
+.problems__title-tablet {
+  @include tablet {
+    display: block;
+  }
+}
