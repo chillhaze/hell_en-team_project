@@ -1,21 +1,4 @@
-// Нужно будет удалить после обновления common
-
-.container {
-  min-width: 320px;
-  max-width: 480px;
-  margin: 0 auto;
-  padding: 0 20px;
-
-  @media screen and (min-width: 768px) {
-    max-width: 768px;
-    padding: 0 40px;
-  }
-
-  @media screen and (min-width: 1280px) {
-    max-width: 1280px;
-  }
-}
-
+/* -----About----- */
 .about__title {
   font-weight: 800;
   font-size: 20px;
