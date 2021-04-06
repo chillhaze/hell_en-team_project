@@ -19,8 +19,8 @@
                 stroke-miterlimit="4" stroke-width="3.7647" d="M29.168 29.168l-27.286-27.286">
             </path>
         </symbol>
-        <symbol id="icon-menu" viewBox="0 0 48 32">
-            <path stroke-width="4.571" d="M0 2.286h46.857M0 16h46.857M0 29.714h46.857" />
+        <symbol id="icon-menu" viewBox="0 0 32 32">
+            <path d="M0 23.111h32v3.556h-32zM0 14.222h32v3.556h-32zM0 5.333h32v3.556h-32z"></path>
         </symbol>
         <symbol id="icon-fire" viewBox="0 0 23 32">
             <path
