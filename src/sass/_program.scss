@@ -1,0 +1,261 @@
+.program {
+  position: relative;
+  background-color: var(--bg-color-dark);
+  color: var(--bg-color-light);
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  @include tablet {
+    padding-top: 60px;
+    padding-bottom: 189px;
+  }
+  @include desktop {
+    padding-top: 120px;
+    padding-bottom: 164px;
+    z-index: 0;
+  }
+
+  &__title {
+    @include font-pm(20, 0.03, 800, 26);
+    text-align: center;
+    color: var(--font-color-light);
+
+    @include tablet {
+      text-align: left;
+      @include font-pm(26, 0.03, 800, 33.8);
+    }
+    @include desktop {
+      @include font-pm(46, 0.03, 800, 59.8);
+    }
+  }
+
+  &__title--counter {
+    position: relative;
+    @include font-pm(14, 0.08, 700, 28);
+    text-transform: uppercase;
+    margin-top: 0;
+    display: inline-block;
+
+    &::before {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: -34px;
+      content: '';
+      display: block;
+      height: 12px;
+      width: 12px;
+      background-color: var(--accent-color);
+      border-radius: 50%;
+      z-index: 2;
+
+      @include tablet {
+        left: -64px;
+      }
+      @include desktop {
+        top: -68.5px;
+        left: 0;
+      }
+    }
+
+    @include desktop {
+      @include font-pm(20, 0.08, 700, 28);
+    }
+  }
+
+  &__list {
+    outline: 1px solid lime;
+    margin-left: auto;
+    margin-top: 43px;
+    width: 66.66667%;
+
+    @include tablet {
+      margin-top: 52px;
+      max-width: 83.33333%;
+    }
+
+    @include desktop {
+      display: flex;
+      min-width: 100%;
+      margin-top: 160px;
+      justify-content: space-between;
+    }
+  }
+
+  &__item {
+    position: relative;
+    @include desktop {
+      width: calc((100% - 120px) / 5);
+      position: relative;
+    }
+  }
+  &__item:not(:first-child) {
+    margin-top: 40px;
+
+    @include tablet {
+      margin-top: 30px;
+    }
+    @include desktop {
+      margin-top: 0;
+    }
+  }
+
+  &__semester {
+    @include tablet {
+      width: calc((100%-100px) / 3);
+    }
+    @include desktop {
+      width: 100%;
+    }
+  }
+  &__subtitle {
+    @include font-pm(12, 0.08, 700, 19.79);
+    color: var(--accent-color);
+    margin-top: 8px;
+    align-items: center;
+    display: inline-flex;
+
+    &::before {
+      content: ' ';
+      background: var(--accent-color);
+      width: 12px;
+      height: 1px;
+      text-align: center;
+      margin-right: 5px;
+    }
+
+    &--dash {
+      display: block;
+
+      margin-bottom: 10px;
+    }
+
+    &--dash::before {
+      display: inline-block;
+      content: ' ';
+      background: var(--accent-color);
+      width: 12px;
+      height: 1px;
+    }
+
+    @include desktop {
+      @include font-pm(20, 0.08, 700, 32.98);
+    }
+  }
+
+  &--border::after {
+    position: absolute;
+    content: ' ';
+    height: calc(100% + 40px);
+    width: 1px;
+    background-color: var(--bg-color-light);
+    left: -28px;
+    top: 12px;
+
+    @include tablet {
+      left: -58px;
+      height: calc(100% + 30px);
+    }
+    @include desktop {
+      width: 0;
+      height: 0;
+    }
+  }
+}
+
+.counter {
+  margin-right: 7px;
+
+  @include desktop {
+    margin-right: 11px;
+    @include font-pm(30, 0.08, 700, 28);
+  }
+}
+
+.semester {
+  @include tablet {
+    display: flex;
+  }
+  @include desktop {
+    flex-direction: column;
+    margin-top: 25px;
+  }
+
+  &__discription {
+    @include font-pm(12, 0.08, 500, 20);
+    color: var(--font-color-secondary);
+
+    &:last-child {
+      margin-top: 10px;
+    }
+    @include desktop {
+      margin-top: 10px;
+      @include font-pm(18, 0.08, 500, 28);
+    }
+  }
+}
+
+.program__item:last-child {
+  position: relative;
+  @include desktop {
+    margin-right: 30px;
+  }
+}
+
+.program__border--desktop::after {
+  @include desktop {
+    position: absolute;
+    content: ' ';
+    height: 1px;
+    width: 100%;
+    background-color: var(--bg-color-light);
+    left: 0;
+    top: 269px;
+  }
+}
+.program__item--background::before {
+  content: ' ';
+  position: absolute;
+  background-image: url('../images/program-mobile.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 137px;
+  width: 176px;
+  bottom: -3.5%;
+  right: -15%;
+  z-index: 2;
+  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    background-image: url('../images/program-mobile@2x.png');
+  }
+
+  @include tablet {
+    content: ' ';
+    position: absolute;
+    background-image: url('../images/program-tablet.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 280px;
+    width: 384px;
+    top: 72%;
+    right: -5%;
+
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: url('../images/program-tablet@2x.png');
+    }
+  }
+  @include desktop {
+    content: ' ';
+    position: absolute;
+    background-image: url('../images/program-desktop.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 502px;
+    width: 760px;
+    top: 65%;
+    left: -20%;
+    z-index: -1;
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: url('../images/program-desktop@2x.png');
+    }
+  }
+}
