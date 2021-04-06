@@ -27,14 +27,14 @@
 }
 
 .logo__text-top {
-  @include font-pm(18, 0.08, 700, 1.25);
+  @include font-pm(18, 0.08, 800, 24);
 
   @include tablet {
     @include font-pm(26, 0.04, 800, 32);
   }
 
-  @media only screen and (min-width: 1280px) {
-    @include font-pm(26, 0.04, 800, 32);
+  @include desktop {
+    // @include font-pm(26, 0.04, 800, 32);
     white-space: nowrap;
   }
 }
@@ -46,11 +46,15 @@
   fill: var(--accent-color);
 
   @include tablet {
+    margin-left: 4px;
+    margin-right: 4px;
     width: 22px;
     height: 30px;
   }
 
   @include desktop {
+    margin-left: 4px;
+    margin-right: 4px;
     width: 22px;
     height: 30px;
   }
@@ -61,18 +65,18 @@
 }
 
 .logo__text-bottom {
-  margin-top: 8px;
+  margin-top: -1px;
   text-transform: uppercase;
-  @include font-pm(7, 0.08, 800, 1.25);
+  @include font-pm(6, 0.09, 800, 10);
 
   @include tablet {
     margin-top: 5px;
-    @include font-pm(8, 0.29, 700, 10);
+    @include font-pm(8, 0.2, 700, 10);
   }
 
-  @media only screen and (min-width: 1280px) {
+  @include desktop {
     margin-top: 5px;
-    @include font-pm(8, 0.28, 700, 10);
+    @include font-pm(8, 0.2, 700, 10);
   }
 }
 

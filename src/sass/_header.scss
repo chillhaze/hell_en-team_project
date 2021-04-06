@@ -15,7 +15,7 @@
     display: none;
   }
 
-  @media only screen and (min-width: 1280px) {
+  @include desktop {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -74,7 +74,7 @@
     border: 2px solid var(--accent-color);
   }
 
-  @media only screen and (min-width: 1280px) {
+  @include desktop {
     display: block;
     padding: 26px 24px;
     @include font-pm(14, 0.08, 700, 17);
@@ -96,15 +96,10 @@
 
 .header__mobile-menu {
   background-color: transparent;
-  border: 2px solid red;
+  border: none;
+  // border: 2px solid red;
 
-  @media only screen and (min-width: 1280px) {
+  @include desktop {
     display: none;
   }
-}
-
-.header__mobile-menu-icon {
-  fill: black;
-  color: black;
-  //   background-color: black;
 }
