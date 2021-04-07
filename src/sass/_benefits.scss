@@ -48,16 +48,16 @@
     @include font-pm(14, 0.08, 700, 20);
 
     &:not(last-child) {
-      margin-bottom: 20px;
+      padding-bottom: 20px;
     }
     @include tablet {
       flex-basis: calc((100% - 20px) / 2);
-      margin-top: 30px;
+      padding-top: 30px;
     }
     @include desktop {
       @include font-pm(20, 0.08, 700, 24.38);
       flex-basis: calc((100% - 40px) / 3);
-      margin-top: 32px;
+      padding-top: 32px;
     }
     &::before {
       display: block;
