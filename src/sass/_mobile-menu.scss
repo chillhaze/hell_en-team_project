@@ -6,14 +6,14 @@
   max-width: 767px;
   overflow-y: scroll;
   top: 0;
-  left: 0;
+  right: 0;
   z-index: 10;
   padding-top: 30px;
   width: 100vw;
   height: 100vh;
   background-color: var(--backdrop-color-op);
 
-  transform: translateX(100%);
+  transform: translateX(-100%);
   transition: transform var(--transiton-duration-time) var(--timing-fn);
 
   @include tablet {
