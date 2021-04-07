@@ -58,6 +58,8 @@
   @include desktop {
     margin-bottom: 50px;
     max-width: 1090px;
+    margin-left: auto;
+    margin-right: auto;
 
     @include font-pm(46, 0.03, 800, 60);
   }
