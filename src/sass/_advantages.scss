@@ -36,15 +36,14 @@
   padding-left: 69px;
   margin-bottom: 30px;
 
-  font-size: 14px;
-  line-height: 20px;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-
   @include tablet {
     margin-left: 1px;
     margin-top: 1px;
+    margin-bottom: 0;
+    // добавить margin-bottom: 30px; если будет более трех элементов в секции
+    // margin-bottom: 30px;
     flex-basis: calc(100% / 3 - 1px);
+    
   }
 
   @include desktop {
@@ -52,7 +51,8 @@
     font-size: 20px;
     line-height: 33px;
     font-weight: 800;
-    margin-bottom: 45px;
+    // добавить margin-bottom: 45px; если будет более трех элементов в секции
+    // margin-bottom: 45px;
   }
 }
 
@@ -62,8 +62,9 @@
     height: 60px;
     content: "";
     position: absolute;
-    top: 0;
+    top: 50%;
     left: 0;
+    transform: translateY(-50%);
     // заглушка на случай добавления большего количества advantages__item
     background-image: url(../images/advantages-female.svg);
     background-size: cover;
@@ -72,8 +73,6 @@
     @include desktop {
       width: 100px;
       height: 102px;
-      top: -18px;
-      left: -5px;
     }
   }
 
@@ -96,7 +95,18 @@
   min-height: 57px;
   max-width: 140px;
 
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+
   @include tablet {
     max-width: unset;
+  }
+
+  @include desktop {
+    font-size: 20px;
+    line-height: 33px;
+    font-weight: 800;
   }
 }

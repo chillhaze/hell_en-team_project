@@ -8,35 +8,60 @@
   @include tablet {
     background: linear-gradient(to bottom, var(--bg-color-dark) 63%, var(--bg-color-light) 37%);
     @include desktop {
-      background: linear-gradient(to bottom, var(--bg-color-dark) 65%, var(--bg-color-light) 35%);
       padding-bottom: 130px;
     }
   }
 }
 
-.problems::before {
+@media (min-width: 1281px) {
+  .problems {
+    background: linear-gradient(to bottom, var(--bg-color-dark) 66%, var(--bg-color-light) 34%);
+  }
+}
+
+.problems__container {
+  position: relative;
+  // overflow: hidden;
+  // z-index: -2;
+}
+
+.problems__container::before {
   @include desktop {
     content: '';
     position: absolute;
-    width: 452px;
+    width: 407px;
     height: 472px;
-    right: -200px;
+    right: -180px;
     background: url(../images/fire-bg.svg) no-repeat;
-    background-size: 452px 472px;
+    background-size: contain;
     z-index: -1;
     top: 88px;
   }
 }
 
+// .problems::before {
+//   @include desktop {
+//     content: '';
+//     position: absolute;
+//     width: 445px;
+//     height: 620px;
+//     right: -200px;
+//     background: url(../images/fire-bg.svg) no-repeat;
+//     background-size: contain;
+//     z-index: -1;
+//     top: 88px;
+//   }
+// }
+
 @media (min-width: 1281px) {
-  .problems::before {
+  .problems__container::before {
     content: '';
     position: absolute;
-    width: 452px;
+    width: 407px;
     height: 472px;
-    right: 0;
+    right: -150px;
     background: url(../images/fire-bg.svg) no-repeat;
-    background-size: 452px 472px;
+    background-size: contain;
     z-index: -1;
     top: 88px;
   }
@@ -70,7 +95,7 @@
   @include desktop {
     padding-top: 100px;
     margin-bottom: 70px;
-    padding-left: 40px;
+    // padding-left: 40px;
     @include font-pm(46, 0.03, 800, 59.8);
   }
 }
@@ -93,7 +118,7 @@
 }
 
 .problems__item {
-  @include font-pm(14, 0.08, 700, 20);
+  @include font-pm(14, 0.08, 700, 17.07);
 
   @include tablet {
     flex-basis: calc(50% - 22px);
@@ -105,8 +130,16 @@
       margin-top: 32px;
       margin-left: 40px;
       // width: 336px;
-      @include font-pm(20, 0.08, 700, 28);
+      @include font-pm(20, 0.08, 700, 32.98);
     }
+  }
+}
+
+.problems__text {
+  @include font-pm(14, 0.08, 700, 20);
+
+  @include desktop {
+    @include font-pm(20, 0.08, 700, 28);
   }
 }
 
