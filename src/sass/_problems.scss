@@ -14,13 +14,6 @@
   }
 }
 
-@media (min-width: $desktop) {
-  .problems .container {
-    max-width: 1280px;
-    padding: 0 0;
-  }
-}
-
 .problems::before {
   @include desktop {
     content: '';

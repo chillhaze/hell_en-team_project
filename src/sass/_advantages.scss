@@ -4,113 +4,99 @@
 
   background-color: var(--bg-color-light);
 
-  @media screen and (min-width: 768px) {
+  @include tablet {
     padding-top: 50px;
   }
 
-  @media screen and (min-width: 1280px) {
-    padding-top: 97px;
+  @include desktop {
     padding-bottom: 130px;
   }
 }
 
 .advantages__list {
-  @media screen and (max-width: 767px) {
-    width: 216px;
-    margin-left: auto;
-    margin-right: auto;
+  padding: 0 32px;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  @include tablet {
+    padding: 0;
+    margin-left: calc(-1 * 1px);
+    margin-top: calc(-1 * 1px);
   }
 
-  @media screen and (min-width: 768px) {
-    display: flex;
-    flex-wrap: wrap;
-    margin-right: -10px;
-    margin-left: -10px;
-  }
-
-  @media screen and (min-width: 1280px) {
-    min-height: 102px;
-    align-items: center;
-    margin-right: -19px;
-    margin-left: -19px;
+  @include desktop{
+    justify-content: space-between;
   }
 }
 
 .advantages__item {
   position: relative;
-
-  margin-bottom: 30px;
   padding-left: 69px;
+  margin-bottom: 30px;
 
-  font-weight: 700;
   font-size: 14px;
-  line-height: 1.429;
+  line-height: 20px;
+  font-weight: 700;
   letter-spacing: 0.08em;
 
-  &:last-child {
-    margin-bottom: 0;
+  @include tablet {
+    margin-left: 1px;
+    margin-top: 1px;
+    flex-basis: calc(100% / 3 - 1px);
   }
 
-  &::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
+  @include desktop {
+    padding-left: 82px;
+    font-size: 20px;
+    line-height: 33px;
+    font-weight: 800;
+    margin-bottom: 45px;
+  }
+}
 
-    display: inline-block;
-
+.advantages__item {
+  &::before {
     width: 59px;
     height: 60px;
-
-    background-image: url('../images/advantages-female.svg');
-    background-repeat: no-repeat;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    // заглушка на случай добавления большего количества advantages__item
+    background-image: url(../images/advantages-female.svg);
     background-size: cover;
-  }
+    background-repeat: no-repeat;
 
-  &:nth-child(1) + &::after {
-    background-image: url('../images/advantages-mobile-learning.svg');
-  }
-
-  &:nth-child(2) + &::after {
-    background-image: url('../images/advantages-insurance.svg');
-  }
-
-  @media screen and (min-width: 768px) {
-    margin-right: 10px;
-    margin-left: 10px;
-    margin-bottom: 0;
-    flex-basis: calc((100% - 3 * 20px) / 3);
-  }
-
-  @media screen and (min-width: 1280px) {
-    margin-right: 19px;
-    margin-left: 19px;
-    flex-basis: calc(
-      (100% - 3 * 38px) / 3
-    ); // Если будет выбрана модель с чайладами, то флекс-базис нужно убрать
-    padding-left: 88px;
-
-    // font-size: 20px;
-    font-size: 16px;
-    line-height: 1.65;
-
-    // Костыль-алёрт! По макету это место очень коряво построено. Автоматический flex-basis не подходит (тк каждый элемент разного размера), поэтому сделал через nth-child. Оставил выше его закоменченным, чтоб можно было увидеть наглядно, что он не срабатывает так, чтоб было как на макете. Еще вариант поставить фонт-сайз 16рх, но такое себе.
-    // &:nth-child(1) {
-    //   flex-basis: 428px;
-    // }
-
-    // &:nth-child(2) {
-    //   flex-basis: 333px;
-    // }
-
-    // &:nth-child(3) {
-    //   flex-basis: 343px;
-    // }
-
-    &::after {
+    @include desktop {
       width: 100px;
       height: 102px;
+      top: -18px;
+      left: -5px;
     }
+  }
+
+  &:nth-child(1)::before {
+    background-image: url(../images/advantages-female.svg);
+  }
+
+  &:nth-child(2)::before {
+    background-image: url(../images/advantages-mobile-learning.svg);
+  }
+
+  &:nth-child(3)::before {
+    background-image: url(../images/advantages-insurance.svg);
+  }
+}
+
+.advantages__text {
+  display: block;
+
+  min-height: 57px;
+  max-width: 140px;
+
+  @include tablet {
+    max-width: unset;
   }
 }

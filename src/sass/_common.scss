@@ -66,12 +66,14 @@ body {
   max-width: 480px;
   margin: 0 auto;
   padding: 0 20px;
+
+  outline: 1px solid teal;
   
-  @media screen and (min-width: 768px) {
+  @include tablet {
     max-width: 768px;
     padding: 0 40px;
   }
-  @media screen and (min-width: 1280px) {
+  @include desktop {
     max-width: 1355px;
     padding: 0 20px;
   }
