@@ -205,7 +205,7 @@
   }
 }
 
-.program__item:last-child {
+.program__item:not(:last-child) {
   position: relative;
   @include desktop {
     margin-right: 30px;
@@ -235,7 +235,7 @@
   height: 137px;
   width: 176px;
   bottom: -3.5%;
-  right: -27%;
+  right: -17%;
   z-index: 2;
   @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
     background-image: url('../images/program-mobile@2x.png');
@@ -264,7 +264,7 @@
     background-repeat: no-repeat;
     height: 502px;
     width: 760px;
-    top: 64%;
+    top: 66%;
     left: -20%;
     z-index: -1;
     @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
