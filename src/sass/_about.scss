@@ -1,4 +1,12 @@
 /* -----About----- */
+.section_abot {
+  padding-bottom: 48px;
+
+  @media screen and(min-width: 1280px) {
+    padding-bottom: 130px;
+  }
+}
+
 .about__title {
   font-weight: 800;
   font-size: 20px;
