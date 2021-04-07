@@ -85,10 +85,6 @@
   }
 }
 
-.footer-contacts__link {
-  display: inline-block;
-}
-
 .footer-contacts__link--phone {
   display: flex;
   align-items: center;
@@ -144,7 +140,6 @@
 }
 
 .rights {
-  width: 100vw;
   min-width: 320px;
   background-color: var(--bg-color-dark);
 
