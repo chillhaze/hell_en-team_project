@@ -26,7 +26,7 @@
     margin-top: calc(-1 * 1px);
   }
 
-  @include desktop{
+  @include desktop {
     justify-content: space-between;
   }
 }
@@ -36,23 +36,22 @@
   padding-left: 69px;
   margin-bottom: 30px;
 
+  &:last-child {
+    margin-bottom: 0;
+  }
+
   @include tablet {
     margin-left: 1px;
     margin-top: 1px;
     margin-bottom: 0;
-    // добавить margin-bottom: 30px; если будет более трех элементов в секции
-    // margin-bottom: 30px;
+
     flex-basis: calc(100% / 3 - 1px);
-    
   }
 
   @include desktop {
     padding-left: 82px;
-    font-size: 20px;
-    line-height: 33px;
-    font-weight: 800;
-    // добавить margin-bottom: 45px; если будет более трех элементов в секции
-    // margin-bottom: 45px;
+
+    @include font-pm(20, 0.08, 800, 33);
   }
 }
 
@@ -60,12 +59,11 @@
   &::before {
     width: 59px;
     height: 60px;
-    content: "";
+    content: '';
     position: absolute;
     top: 50%;
     left: 0;
     transform: translateY(-50%);
-    // заглушка на случай добавления большего количества advantages__item
     background-image: url(../images/advantages-female.svg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -73,19 +71,33 @@
     @include desktop {
       width: 100px;
       height: 102px;
+
+      background-image: url(../images/advantages-female-desktop.svg);
     }
   }
 
   &:nth-child(1)::before {
     background-image: url(../images/advantages-female.svg);
+
+    @include desktop {
+      background-image: url(../images/advantages-female-desktop.svg);
+    }
   }
 
   &:nth-child(2)::before {
     background-image: url(../images/advantages-mobile-learning.svg);
+
+    @include desktop {
+      background-image: url(../images/advantages-mobile-learning-desktop.svg);
+    }
   }
 
   &:nth-child(3)::before {
     background-image: url(../images/advantages-insurance.svg);
+
+    @include desktop {
+      background-image: url(../images/advantages-insurance-desktop.svg);
+    }
   }
 }
 
@@ -95,18 +107,13 @@
   min-height: 57px;
   max-width: 140px;
 
-  font-size: 14px;
-  line-height: 20px;
-  font-weight: 700;
-  letter-spacing: 0.08em;
+  @include font-pm(14, 0.08, 700, 20);
 
   @include tablet {
     max-width: unset;
   }
 
   @include desktop {
-    font-size: 20px;
-    line-height: 33px;
-    font-weight: 800;
+    @include font-pm(19, 0.08, 800, 33);
   }
 }
