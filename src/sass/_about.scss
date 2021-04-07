@@ -106,17 +106,29 @@
   }
 }
 
+.about__text-wrapper {
+  margin-top: 25px;
+
+  @include desktop {
+    margin-top: 35px;
+  }
+}
+
 .about__paragraph {
   @include font-pm(12, 0, 500, 20);
 
   color: var(--font-color-secondary);
 
-  margin-top: 25px;
+  &:not(:first-child) {
+    margin-top: 25px;
+  }
 
   @include desktop {
     @include font-pm(18, 0, 500, 28);
 
-    margin-top: 30px;
+    &:not(:first-child) {
+      margin-top: 30px;
+    }
   }
 }
 
