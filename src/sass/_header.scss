@@ -10,6 +10,11 @@
   }
 }
 
+.header__link-container {
+  display: flex;
+  justify-content: space-between;
+}
+
 .header-nav {
   @media only screen and (max-width: 1279px) {
     display: none;
@@ -20,7 +25,7 @@
     justify-content: space-between;
     align-items: center;
     margin-right: 60px;
-    margin-left: 144px;
+    margin-left: 40px;
   }
 }
 
@@ -38,7 +43,7 @@
 
 .header-nav__link {
   display: inline-block;
-  @include font-pm(14, 0.14, 700, 17);
+  @include font-pm(14, 0.03, 700, 17);
   text-transform: uppercase;
   white-space: nowrap;
   color: var(--font-color-secondary);
@@ -50,7 +55,7 @@
   }
 }
 
-.header__btn-list {
+.header__btn-wrapper {
   @include tablet {
     display: flex;
     align-items: center;
