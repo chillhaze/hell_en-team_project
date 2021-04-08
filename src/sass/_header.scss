@@ -1,12 +1,28 @@
 .header-content {
+  position: absolute;
+  top: 0;
+  z-index: 1;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding-top: 30px;
   padding-bottom: 30px;
+  width: 90%;
+
+  @include mobile {
+    min-width: 320px;
+    max-width: 480px;
+  }
 
   @include tablet {
+    max-width: 768px;
     padding-top: 40px;
+    width: 90%;
+  }
+
+  @include desktop {
+    min-width: 1280px;
+    max-width: 1355px;
   }
 }
 
@@ -110,5 +126,22 @@
 
   @include desktop {
     display: none;
+  }
+}
+
+.header {
+  position: relative;
+  margin: 0 auto;
+  @include mobile {
+    min-width: 320px;
+    max-width: 480px;
+  }
+  @include tablet {
+    max-width: 768px;
+  }
+
+  @include desktop {
+    min-width: 1280px;
+    max-width: 1355px;
   }
 }
