@@ -16,7 +16,7 @@
   };
 
   openMenuBtn.addEventListener('click', toggleMenu);
-  closeMenuBtn.addEventListener('click', toggleMenu);
+  // closeMenuBtn.addEventListener('click', toggleMenu);
 
   mobileMenu.addEventListener('click', event => {
     if (event.target.nodeName !== 'DIV' && event.target.nodeName !== 'LI') {
