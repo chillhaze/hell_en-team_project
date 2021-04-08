@@ -9,6 +9,7 @@
     padding: 0;
   }
   &__title {
+    padding-bottom: 30px;
     color: var(--bg-color-light);
     @include font-pm(20, 0.03, 800, 27.2);
     max-width: 56.25%;
@@ -23,8 +24,8 @@
     }
   }
   &__list {
+    margin: 0;
     position: relative;
-
     counter-reset: section;
     background-color: var(--bg-color-light);
     padding: 20px 14px 20px 30px;
@@ -37,7 +38,6 @@
       padding-right: 118px;
     }
     @include desktop {
-      margin-top: -32px;
       padding: 70px 83px 70px 84px;
       box-shadow: -5px 8px 26px rgb(0 0 0 / 4%);
       overflow: hidden;
