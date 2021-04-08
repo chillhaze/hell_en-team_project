@@ -1,5 +1,9 @@
 .how-we-do {
   padding-bottom: 50px;
+
+  @include desktop {
+    padding-bottom: 130px;
+  }
 }
 
 .how-we-do__title {
@@ -9,14 +13,14 @@
   @include font-pm(20, 0.03, 800);
   color: var(--font-color-main);
 
-  @media (min-width: 1280px) {
+  @include desktop {
     text-align: start;
     font-size: 46px;
   }
 }
 
 .how-we-do__list {
-  @media (min-width: 768px) {
+  @include tablet {
     display: flex;
     flex-wrap: wrap;
     margin: -20px 0 0 -20px;
@@ -73,12 +77,12 @@
     background-color: var(--bg-color-light);
   }
 
-  @media (min-width: 768px) {
+  @include tablet {
     flex-basis: calc(100% / 2 - 20px);
     margin: 20px 0 0 20px;
   }
 
-  @media (min-width: 1280px) {
+  @include desktop {
     flex-basis: calc(100% / 3 - 20px);
     margin: 20px 0 0 20px;
     padding: 40px 30px;
@@ -89,7 +93,7 @@
   margin-bottom: 20px;
   text-align: center;
 
-  @media (min-width: 1280px) {
+  @include desktop {
     margin-bottom: 30px;
   }
 }
@@ -117,7 +121,7 @@
     background-color: var(--accent-color);
   }
 
-  @media (min-width: 1280px) {
+  @include desktop {
     margin-bottom: 32px;
     flex-grow: 1;
     font-size: 20px;
