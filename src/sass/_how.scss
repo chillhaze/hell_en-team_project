@@ -39,6 +39,10 @@
   box-shadow: 0px 8px 26px rgba(0, 0, 0, 0.1);
   border: none;
 
+  transition: color var(--transiton-duration-time) var(--timing-fn),
+    background-color var(--transiton-duration-time) var(--timing-fn),
+    fill var(--transiton-duration-time) var(--timing-fn);
+
   &:hover,
   &:focus,
   &:focus-within {
