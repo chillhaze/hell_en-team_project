@@ -11,4 +11,4 @@ new Glider(document.querySelector(".glider"),{slidesToShow:1,dots:"#dots",dragga
 },{}],"Focm":[function(require,module,exports) {
 "use strict";require("./sass/main.scss"),require("./js/mobile-menu"),require("./js/glider"),require("./js/script");
 },{"./sass/main.scss":"clu1","./js/mobile-menu":"sByI","./js/glider":"eVWW","./js/script":"L4bL"}]},{},["Focm"], null)
-//# sourceMappingURL=/hell_en-team_project/src.500bd18f.js.map
+//# sourceMappingURL=/hell_en-team_project/src.9a177ff0.js.map
