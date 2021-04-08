@@ -27,6 +27,10 @@
   @include tablet {
     display: flex;
   }
+
+  @include desktop {
+    max-width: 1205px;
+  }
 }
 
 .about__img {
@@ -45,6 +49,8 @@
 }
 
 .about__sub-title {
+  margin-bottom: 20px;
+
   @include font-pm(20, 0.08, 800, 24.38);
 
   @include desktop {
@@ -91,6 +97,10 @@
     margin-bottom: 27px;
     @include tablet {
       margin-bottom: 37px;
+    }
+
+    @include desktop {
+      @include font-pm(16, 0.06, 600, 20);
     }
   }
 
