@@ -93,14 +93,14 @@
 
   position: relative;
 
+  @include desktop {
+    @include font-pm(16, 0.06, 600, 20);
+  }
+
   &:not(:last-child) {
     margin-bottom: 27px;
     @include tablet {
       margin-bottom: 37px;
-    }
-
-    @include desktop {
-      @include font-pm(16, 0.06, 600, 20);
     }
   }
 
