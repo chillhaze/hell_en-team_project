@@ -118,8 +118,17 @@
   @include font-pm(12, 0.08, 500, 15);
   color: var(--font-color-secondary);
 
+  @media screen and (min-width: $mobile) and (max-width: 767px) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   @include tablet {
     margin-bottom: 20px;
+  }
+
+  @include desktop {
+    @include font-pm(14, 0.08, 500, 17);
   }
 }
 
@@ -148,7 +157,7 @@
 
 .glider-prev,
 .glider-next {
-  content: "";
+  content: '';
   position: absolute;
   top: 95%;
 
@@ -180,6 +189,3 @@
     display: none;
   }
 }
-
-
-
