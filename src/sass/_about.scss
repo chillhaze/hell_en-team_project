@@ -1,8 +1,14 @@
 /* -----About----- */
 .section__about {
+  padding-top: 20px;
   padding-bottom: 50px;
 
+  @include tablet {
+    padding-top: 30px;
+  }
+
   @include desktop {
+    padding-top: 60px;
     padding-bottom: 130px;
   }
 }
