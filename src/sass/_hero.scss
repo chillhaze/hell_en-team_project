@@ -34,12 +34,15 @@
     max-width: $tablet;
     display: flex;
     height: auto;
-    padding-top: 158px;
+    // padding-top: 158px;
+    padding: 158px 40px 0;
   }
 
   @media screen and(min-width: $desktop) {
-    max-width: 1280px;
+    max-width: 1355px;
     height: auto;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 }
 
@@ -128,7 +131,7 @@
 
   @media screen and(min-width: $tablet) {
     position: absolute;
-    top: 40px;
+    top: 153px;
     left: 374px;
     width: 376px;
     height: 321px;
@@ -150,7 +153,9 @@
     height: 718px;
     margin: 0;
     background-image: url(../images/hero-desktop-single.png);
-    background-size: 841px 718px;
+    background-size: 785px 667px;
+    background-repeat: no-repeat;
+    background-position: center;
 
     @media screen and(min-device-pixel-ratio: 2),
       (min-resolution: 192dpi),
@@ -170,5 +175,6 @@
   @media screen and(min-width: $desktop) {
     width: 642px;
     margin-top: 70px;
+    padding-right: 0;
   }
 }

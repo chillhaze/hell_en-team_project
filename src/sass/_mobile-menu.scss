@@ -13,7 +13,7 @@
   height: 100vh;
   background-color: var(--backdrop-color-op);
 
-  transform: translateX(-100%);
+  transform: translateX(101%);
   transition: transform var(--transiton-duration-time) var(--timing-fn);
 
   @include tablet {
